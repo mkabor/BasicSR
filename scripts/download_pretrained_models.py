@@ -6,7 +6,7 @@ from basicsr.utils.download_util import download_file_from_google_drive
 
 
 def download_pretrained_models(method, file_ids):
-    save_path_root = f'./experiments/pretrained_models/{method}'
+    save_path_root = f'/content/BasicSR/experiments/pretrained_models/{method}'
     os.makedirs(save_path_root, exist_ok=True)
 
     for file_name, file_id in file_ids.items():
