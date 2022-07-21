@@ -1,6 +1,7 @@
 import cv2
 import numpy as np
 import os
+from glob import glob
 import sys
 from multiprocessing import Pool
 from os import path as osp
@@ -94,7 +95,9 @@ def extract_subimages(opt):
         print(f'Folder {save_folder} already exists. Exit.')
         sys.exit(1)
 
-    img_list = list(scandir(input_folder, full_path=True))
+    #img_list = list(scandir(input_folder, full_path=True))
+    
+    img_list = glob(input_folder+"/*.*)
 
     pbar = tqdm(total=len(img_list), unit='image', desc='Extract')
     pool = Pool(opt['n_thread'])
