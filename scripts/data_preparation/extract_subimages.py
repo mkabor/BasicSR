@@ -45,32 +45,32 @@ def main():
     opt['compression_level'] = 3
 
     # HR images
-    opt['input_folder'] = '/content/BasicSR/datasets/train/HR'
-    opt['save_folder'] = '/content/BasicSR/datasets/train/HR_sub'
+    opt['input_folder'] = '/content/BasicSR/datasets/train/HR/'
+    opt['save_folder'] = '/content/BasicSR/datasets/train/HR_sub/'
     opt['crop_size'] = 480
     opt['step'] = 240
     opt['thresh_size'] = 0
     extract_subimages(opt)
 
     # LRx2 images
-    opt['input_folder'] = '/content/BasicSR/datasets/train/LR/x2'
-    opt['save_folder'] = '/content/BasicSR/datasets/train/LR/x2_sub'
+    opt['input_folder'] = '/content/BasicSR/datasets/train/LR/x2/'
+    opt['save_folder'] = '/content/BasicSR/datasets/train/LR/x2_sub/'
     opt['crop_size'] = 240
     opt['step'] = 120
     opt['thresh_size'] = 0
     extract_subimages(opt)
 
     # LRx3 images
-    opt['input_folder'] = '/content/BasicSR/datasets/train/LR/x3'
-    opt['save_folder'] = '/content/BasicSR/datasets/train/LR/x3_sub'
+    opt['input_folder'] = '/content/BasicSR/datasets/train/LR/x3/'
+    opt['save_folder'] = '/content/BasicSR/datasets/train/LR/x3_sub/'
     opt['crop_size'] = 160
     opt['step'] = 80
     opt['thresh_size'] = 0
     extract_subimages(opt)
 
     # LRx4 images
-    opt['input_folder'] = '/content/BasicSR/datasets/train/LR/x4'
-    opt['save_folder'] = '/content/BasicSR/datasets/train/LR/x4_sub'
+    opt['input_folder'] = '/content/BasicSR/datasets/train/LR/x4/'
+    opt['save_folder'] = '/content/BasicSR/datasets/train/LR/x4_sub/'
     opt['crop_size'] = 120
     opt['step'] = 60
     opt['thresh_size'] = 0
@@ -97,7 +97,7 @@ def extract_subimages(opt):
 
     #img_list = list(scandir(input_folder, full_path=True))
     
-    img_list = glob(input_folder+"/*.*")
+    img_list = glob(input_folder+"*.*")
 
     pbar = tqdm(total=len(img_list), unit='image', desc='Extract')
     pool = Pool(opt['n_thread'])
