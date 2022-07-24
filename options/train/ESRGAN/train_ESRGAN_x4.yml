@@ -8,10 +8,10 @@ manual_seed: 0
 # dataset and data loader settings
 datasets:
   train:
-    name: DIV2K
+    name: unsplash_train_set
     type: PairedImageDataset
-    dataroot_gt: datasets/DIV2K/DIV2K_train_HR_sub
-    dataroot_lq: datasets/DIV2K/DIV2K_train_LR_bicubic/X4_sub
+    dataroot_gt: /content/BasicSR/datasets/train/HR_sub
+    dataroot_lq: /content/BasicSR/datasets/train/LR/x4_sub
     # (for lmdb)
     # dataroot_gt: datasets/DIV2K/DIV2K_train_HR_sub.lmdb
     # dataroot_lq: datasets/DIV2K/DIV2K_train_LR_bicubic_X4_sub.lmdb
@@ -32,10 +32,10 @@ datasets:
     prefetch_mode: ~
 
   val:
-    name: Set14
+    name: unsplash_val_set
     type: PairedImageDataset
-    dataroot_gt: datasets/Set14/GTmod12
-    dataroot_lq: datasets/Set14/LRbicx4
+    dataroot_gt: /content/BasicSR/datasets/val/HR_sub
+    dataroot_lq: /content/BasicSR/datasets/val/LR/x4_sub
     io_backend:
       type: disk
 
