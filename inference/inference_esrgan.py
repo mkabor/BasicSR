@@ -14,9 +14,9 @@ def main():
         '--model_path',
         type=str,
         default=  # noqa: E251
-        'experiments/pretrained_models/ESRGAN/ESRGAN_SRx4_DF2KOST_official-ff704c30.pth'  # noqa: E501
+        '/content/BasicSR/experiments/pretrained_models/ESRGAN/ESRGAN_SRx4_DF2KOST_official-ff704c30.pth'  # noqa: E501
     )
-    parser.add_argument('--input', type=str, default='datasets/Set14/LRbicx4', help='input test image folder')
+    parser.add_argument('--input', type=str, default='/content/BasicSR/datasets/train/LR/x4_sub', help='input test image folder')
     parser.add_argument('--output', type=str, default='results/ESRGAN', help='output folder')
     args = parser.parse_args()
 
