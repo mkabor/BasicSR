@@ -17,7 +17,7 @@ def main():
         '/content/BasicSR/experiments/pretrained_models/ESRGAN/ESRGAN_SRx4_DF2KOST_official-ff704c30.pth'  # noqa: E501
     )
     parser.add_argument('--input', type=str, default='/content/BasicSR/datasets/train/LR/x4_sub', help='input test image folder')
-    parser.add_argument('--output', type=str, default='results/ESRGAN', help='output folder')
+    parser.add_argument('--output', type=str, default='/content/BasicSR/results/ESRGAN', help='output folder')
     args = parser.parse_args()
 
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
