@@ -92,24 +92,24 @@ def main():
     extract_subimages(opt)
 
     # LRx2 images
-    opt['input_folder'] = '/content/BasicSR/datasets/data_without_da/train/LR/x2'
-    opt['save_folder'] = '/content/BasicSR/datasets/data_without_da/train/LR/x2_sub/'
+    opt['input_folder'] = '/content/BasicSR/datasets/data_without_da/val/LR/x2'
+    opt['save_folder'] = '/content/BasicSR/datasets/data_without_da/val/LR/x2_sub/'
     opt['crop_size'] = 240
     opt['step'] = 120
     opt['thresh_size'] = 0
     extract_subimages(opt)
 
     # LRx3 images
-    opt['input_folder'] = '/content/BasicSR/datasets/data_without_da/train/LR/x3'
-    opt['save_folder'] = '/content/BasicSR/datasets/data_without_da/train/LR/x3_sub/'
+    opt['input_folder'] = '/content/BasicSR/datasets/data_without_da/val/LR/x3'
+    opt['save_folder'] = '/content/BasicSR/datasets/data_without_da/val/LR/x3_sub/'
     opt['crop_size'] = 160
     opt['step'] = 80
     opt['thresh_size'] = 0
     extract_subimages(opt)
 
     # LRx4 images
-    opt['input_folder'] = '/content/BasicSR/datasets/data_without_da/train/LR/x4'
-    opt['save_folder'] = '/content/BasicSR/datasets/data_without_da/train/LR/x4_sub/'
+    opt['input_folder'] = '/content/BasicSR/datasets/data_without_da/val/LR/x4'
+    opt['save_folder'] = '/content/BasicSR/datasets/data_without_da/val/LR/x4_sub/'
     opt['crop_size'] = 120
     opt['step'] = 60
     opt['thresh_size'] = 0
