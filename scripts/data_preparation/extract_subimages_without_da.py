@@ -172,7 +172,7 @@ def extract_subimages(opt):
 
     #img_list = list(scandir(input_folder, full_path=True))
     
-    img_list = glob(input_folder+"*.*")
+    img_list = glob(input_folder+"/*.*")
 
     pbar = tqdm(total=len(img_list), unit='image', desc='Extract')
     pool = Pool(opt['n_thread'])
